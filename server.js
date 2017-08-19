@@ -18,6 +18,7 @@ app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
 app.use(bodyParser.text({ type: 'text/html' }))
 
 require('./app/routing/htmlRoutes.js')(app);
+require('./app/routing/apiRoutes.js')(app);
 
 app.listen(PORT, function() {
 	console.log('The app is listening on Port ' + PORT);
